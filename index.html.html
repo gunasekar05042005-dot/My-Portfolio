@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gunasekar Boobalan — Python Developer Portfolio</title>
+<meta name="description" content="Portfolio of Gunasekar Boobalan: Python developer building AI and web projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fafaf7;--surface:#ffffff;--text:#1a1a1a;--muted:#5f5f5a;--line:#e5e4de;
+  --accent:#c2410c;--accent-soft:#fff1e8;--accent-text:#ffffff;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#111110;--surface:#1a1918;--text:#f2f1ec;--muted:#a3a29b;--line:#2b2a27;--accent:#fb923c;--accent-soft:#2a1b10;--accent-text:#111110;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#111110;--surface:#1a1918;--text:#f2f1ec;--muted:#a3a29b;--line:#2b2a27;--accent:#fb923c;--accent-soft:#2a1b10;--accent-text:#111110;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+.logo{font-weight:700;text-decoration:none}
+.links{display:flex;gap:18px;font-size:14px}
+.links a{color:var(--muted);text-decoration:none}
+.links a:hover{color:var(--accent)}
+@media(max-width:560px){.links a:nth-child(n+4){display:none}}
+.hero{padding:72px 0 48px}
+.tag{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);margin:0 0 14px}
+h1{font-size:clamp(34px,7vw,56px);line-height:1.1;margin:0 0 16px;letter-spacing:-.02em}
+.lead{font-size:18px;color:var(--muted);max-width:620px;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;border:1px solid var(--line);background:var(--surface)}
+.btn.primary{background:var(--accent);color:var(--accent-text);border-color:var(--accent)}
+.btn:hover{transform:translateY(-1px)}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-size:13px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin:0 0 22px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:22px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat b{display:block;font-size:22px}
+.stat span{font-size:13px;color:var(--muted)}
+.grid{display:grid;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{margin:0 0 4px;font-size:19px}
+.sub{font-size:13px;color:var(--muted);margin:0 0 12px}
+.card p{margin:0 0 12px}
+.card ul{margin:0 0 14px;padding-left:18px;color:var(--muted);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:0;list-style:none}
+.chips li{font-size:12px;padding:3px 10px;border-radius:99px;background:var(--accent-soft);color:var(--accent);font-weight:500}
+.card .row{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;font-weight:600}
+.card .row a{color:var(--accent);text-decoration:none}
+.card .row a:hover{text-decoration:underline}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.skills h3{font-size:14px;margin:0 0 8px}
+.item{display:flex;justify-content:space-between;gap:12px;margin-bottom:14px}
+.item b{display:block}
+.item span{color:var(--muted);font-size:14px}
+.when{white-space:nowrap;font-size:13px;color:var(--muted)}
+.certs{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.certs li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:15px}
+.contact{text-align:center}
+.contact p{color:var(--muted);max-width:480px;margin:0 auto 22px}
+footer{padding:26px 0;text-align:center;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#top">Gunasekar<span style="color:var(--accent)">.</span></a>
+  <div class="links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<main class="wrap" id="top">
+<header class="hero">
+  <p class="tag">Hi, I’m</p>
+  <h1>Gunasekar Boobalan</h1>
+  <p class="lead">Fresher Python developer who builds and ships AI and web projects end to end. Open to Python Developer, Full-Stack, Data Analyst and Salesforce Developer roles.</p>
+  <div class="btns">
+    <a class="btn primary" href="#projects">View my projects</a>
+    <a class="btn" href="https://github.com/gunasekar05042005-dot" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/gunasekar-boobalan-9abb28390/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <p>I’m a 2026 BCA graduate from Ranipet, Tamil Nadu. I learn by building: my projects are deployed and live, and I’ve debugged real problems along the way, from hosting size limits to API version changes. I enjoy turning an idea into something people can actually open and use.</p>
+  <div class="stats">
+    <div class="stat"><b>8.0</b><span>CGPA, BCA</span></div>
+    <div class="stat"><b>2 live</b><span>deployed projects</span></div>
+    <div class="stat"><b>50</b><span>brands in my AI database</span></div>
+    <div class="stat"><b>NMMS</b><span>National Merit Scholar</span></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+
+    <article class="card">
+      <h3>Fake Logo Detection System</h3>
+      <p class="sub">AI brand authentication · Live</p>
+      <p>Upload a brand logo and the AI tells you whether it matches an authentic logo in a database of 50 brands.</p>
+      <ul>
+        <li>Extracts 512-dimensional embeddings with OpenAI CLIP ViT-B/32 and matches them by cosine similarity.</li>
+        <li>Built a Flask REST API with rate limiting, API-key auth, magic-byte file validation and EXIF stripping.</li>
+        <li>Moved the model to Hugging Face Spaces after Vercel’s 500 MB limit forced a less accurate fallback, and kept Vercel for the Angry Birds-themed frontend.</li>
+      </ul>
+      <ul class="chips"><li>Python</li><li>PyTorch</li><li>CLIP</li><li>Flask</li><li>Gradio</li><li>Vercel</li><li>Hugging Face</li></ul>
+      <div class="row">
+        <a href="https://fake-logo-detector-theta.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
+        <a href="https://huggingface.co/spaces/Guna0010/fake-logo-detector" target="_blank" rel="noopener">Hugging Face ↗</a>
+        <a href="https://github.com/gunasekar05042005-dot/Fake-Logo-Detector" target="_blank" rel="noopener">Source ↗</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Real-Time Weather App</h3>
+      <p class="sub">Frontend web app · Live on Netlify</p>
+      <p>A single-page weather app with live location suggestions and current conditions.</p>
+      <ul>
+        <li>Calls the OpenWeatherMap API directly from the browser, with live suggestions from the Geocoding API.</li>
+        <li>Added hardcoded coordinates so small towns return reliable results.</li>
+      </ul>
+      <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>OpenWeatherMap API</li><li>Netlify</li></ul>
+      <div class="row"><a href="https://github.com/gunasekar05042005-dot" target="_blank" rel="noopener">See on GitHub ↗</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Courier Management System</h3>
+      <p class="sub">Salesforce · Aug 2023 – Apr 2024</p>
+      <p>A cloud logistics platform that centralises and automates courier operations.</p>
+      <ul>
+        <li>Covers shipment booking, tracking, delivery-agent assignment, notifications and billing.</li>
+        <li>Includes analytics for managers across multiple branches.</li>
+      </ul>
+      <ul class="chips"><li>Salesforce</li><li>Cloud CRM</li><li>Automation</li></ul>
+    </article>
+
+    <article class="card">
+      <h3>FitMate</h3>
+      <p class="sub">Fitness goal tracker · Jul – Oct 2025</p>
+      <p>A web app where users set a personal fitness goal and the exercises, with daily rep targets, to reach it.</p>
+      <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+    </article>
+
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="card"><h3>Languages</h3><ul class="chips"><li>Python</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>SQL</li></ul></div>
+    <div class="card"><h3>AI and data</h3><ul class="chips"><li>PyTorch</li><li>CLIP</li><li>NumPy</li><li>Pillow</li><li>scikit-learn</li></ul></div>
+    <div class="card"><h3>Backend and cloud</h3><ul class="chips"><li>Flask</li><li>REST APIs</li><li>Salesforce</li><li>Oracle Cloud</li></ul></div>
+    <div class="card"><h3>Tools</h3><ul class="chips"><li>Git and GitHub</li><li>VS Code</li><li>Vercel</li><li>Netlify</li><li>Hugging Face</li></ul></div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education and certifications</h2>
+  <div class="item"><div><b>Bachelor of Computer Applications</b><span>SSS College of Arts, Science &amp; Management, Ranipet · CGPA 8.0</span></div><div class="when">2023 – 2026</div></div>
+  <div class="item"><div><b>Higher Secondary</b><span>Sri Ramakrishna Hr. Sec School, BHEL Ranipet · 79%</span></div><div class="when">2021 – 2023</div></div>
+  <ul class="certs">
+    <li>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</li>
+    <li>Salesforce Administrator with Agentforce</li>
+    <li>Cyber Security and Forensics, Redback IT Solutions (internship)</li>
+    <li>Infosys Springboard: Python and Advanced Data Science</li>
+    <li>ADROIT: Oracle Database Foundation</li>
+  </ul>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>I’m looking for an entry-level role where I can keep building and learning. The best way to reach me is email.</p>
+  <div class="btns" style="justify-content:center">
+    <a class="btn primary" href="mailto:gunasekar05042005@gmail.com">gunasekar05042005@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/gunasekar-boobalan-9abb28390/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Gunasekar Boobalan · Ranipet, Tamil Nadu, India</footer>
+</body>
+</html>
